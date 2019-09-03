@@ -1,0 +1,344 @@
+@import '_mixins.scss';
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  font-family: $font-lato, sans-serif;
+}
+
+a { 
+    color: black;
+    text-transform: uppercase;
+  }
+
+.header {
+  height: 200px;
+  
+  &__message {
+    width: 100%;
+    height: 30px;
+    background-color: #68899a;
+    margin: $margin-main;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+
+  &__main {
+    max-width: 1200px;
+    margin: $margin-main;
+    height: 100px;
+    @include flex-space-between;
+    align-items: center;
+
+    &__logo {
+      height: 24px;
+      @include flex-center;
+    }
+
+    &__language {
+      @include flex-center;
+    }
+
+    &__btn {
+      font-family: $font-lato;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      width: 128px;
+      height: 44px;
+      border: 2px solid #ded3aa;
+      background-color: white;
+    }
+  }
+  
+  &__nav {
+    max-width: 1200px;
+    margin: $margin-main;
+    height: 50px;
+    @include flex-space-between;
+    align-items: center;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    
+    &__list {
+      @include flex-space-between;
+      list-style-type: none;
+      
+      a {
+        padding: $padding-space;
+      }
+    }
+
+    &__search {
+      i {
+        padding: 0 5px;
+      }
+
+      &__heart {
+        border-right: 1px dotted black;
+      }
+    }
+  }
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  @include flex-center;
+
+  .d-flex { display: flex; }
+
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;  
+  }
+
+  .gallery {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &__image {
+      width: 20%;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+      
+      &--big {
+        width: 100%;
+        text-align: center;
+         
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+  
+    
+
+  &__info {
+    width: 40%;
+    margin: auto;
+    margin-left: 20px;
+
+    &__price {
+      margin-top: 50px;
+
+      &__back {
+        color: #111111;
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      &__woman {
+        color: #68899a;
+        font-family: $font-regular;
+        font-weight: 400;
+        line-height: 12px;
+      }
+
+      &__label {
+        margin-top: 15px;
+        font-family: $font-bold;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      
+      &__block {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+
+        &__stars {
+          .full {
+            color: #ded3aa;
+            font-size: 16px;
+            line-height: 36px;
+          }
+          
+          .emtpy {
+            color:  #dfdfde;
+            font-size: 16px;
+            line-height: 36px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &__review {
+        color: #555555;
+        font-family: $font-light;
+        font-weight: 300;
+        line-height: 36px;
+        border-right: 1px solid;
+        padding-right: 12px;
+      }
+      
+      &__adding {
+        font-family: $font-regular;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 36px;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+
+      &__value {
+        color: #68899a;
+        font-family: $font-bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 48px;
+        text-transform: uppercase;
+      }
+    }
+  
+    &__made {
+      &__key {
+        color: #111111;
+        font-family: $font-regular;
+        font-weight: 600;
+        letter-spacing: 0.56px;
+        
+        &__value {
+          color: #111111;
+          font-family: $font-light;
+          font-weight: 300;
+          letter-spacing: 0.56px;
+        }
+      }
+    }
+    
+    &__about {
+      margin: 20px 0;
+      color: #555555;
+      font-family: $font-lato;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.56px;
+
+      &__text {
+        margin: inherit;
+      }
+
+      &__list {
+        margin: inherit;
+        padding: 0 15px;
+      }
+    }
+
+    &__selecting {
+      width: 100%;
+      display: flex;
+
+      &__container {
+        width: 40%;
+        margin: 10px;
+        
+        &__label {
+          @include capturing;
+        }
+
+        &__choice {
+          width: 100%;
+          border: 1px solid #e1e1e1;
+          height: 30px;
+        }
+      }
+
+      &__container--thin {
+        width: 20%;
+        margin: 10px;
+        
+        &__label {
+          @include capturing;
+        }
+
+        &__choice {
+          width: 100%;
+          border: 1px solid #e1e1e1;
+          height: 30px;
+        }
+      }
+    }
+
+    &__clear--link {
+      margin-top: 20px;
+      color: #111111;
+      font-family: $font-lato;
+      font-size: 12px;
+      font-weight: 400;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    &__adding {
+      width: 100%;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      
+      &__btn--first {
+        width: 45%;
+        padding: 20px auto;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+      }
+      
+      &__btn--second {
+        width: 45%;
+        padding: 20px;
+        background-color: #fff;
+        text-transform: uppercase;
+      }
+    }
+
+    &__links {
+      width: 100%;
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #111111;
+      font-family: $font-lato;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer { 
+  @include flex-center;
+  height: 50px;
+  color: #b5b5b5;
+  font-size: 13px;
+  border-top: 1px solid #e1e1e1;
+}
+
+@import '_media.scss';

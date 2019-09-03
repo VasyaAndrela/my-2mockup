@@ -1,0 +1,58 @@
+/* Media for: 1200, 840, 620 px */
+@media (max-width: 1200px) {
+  .header {
+    &__main, &__nav {
+      margin: 0 5% 0;
+    }
+  }
+
+  .main {
+    margin: 0 5% 0 5%;
+  }
+}
+
+@media (max-width: 840px) {
+  .header {
+    &__nav__list__item {
+      padding: 10px;
+    }
+  }
+  
+  .header__nav__list {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__gallery {
+      margin-right: 0px;
+    }
+
+    &__info {
+      width: 100%;
+      margin: -50px 0 0 0;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .header__message {
+    font-size: 9px;
+  }
+
+  .main__info__links {
+    font-size: 8px;
+    
+    img {
+      height: 15px;
+    }
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}

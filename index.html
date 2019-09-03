@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/83bd6f4eb8.js"></script>
+  <title>myTask</title>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__message-background">
+    <div class="header__message">
+      <div></div>
+      <p class="header__massage__text">start selling your products or buy them from anywhere!</p>
+      <i class="fas fa-times header__massage__icon"></i>
+    </div>
+  </div>
+
+  <section class="header__main">
+    
+    <div class="header__main__language">
+      <i class="fas fa-flag-usa"></i>
+      <select name="select-lang" id="select-lang">
+        <option value="USD">USD</option>
+        <option value="EU">EU</option>
+      </select>
+    </div>
+    <a href="#" class="header__main__logo"><img src="imgs/logo.png" alt="Logo"></a>
+    <button class="header__main__btn">cart(3)</button>
+  
+  </section>
+
+  <nav class="header__nav">
+    <div><i class="fas fa-bars"></i></div>
+    <div>
+    <ul class="header__nav__list">
+      <a href="#" class="header__nav__list">home</a>
+      <a href="#" class="header__nav__list">men  <i class="fas fa-caret-down"></i></a>
+      <a href="#" class="header__nav__list">women  <i class="fas fa-caret-down"></i></a>
+      <a href="#" class="header__nav__list">lookbook</a>
+      <a href="#" class="header__nav__list">about</a>
+      <a href="#" class="header__nav__list">blog</a>
+    </ul>
+    </div>
+    <div class="header__nav__search"><i class="far fa-heart header__nav__search__heart"></i><i class="fas fa-search"></i></div>
+  </nav>
+
+</header>
+
+<main class="main">
+
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery d-flex">
+        <div class="gallery__image--big"><img src="./imgs/rectangle.png" alt="big one"></div>
+        <div class="gallery__list d-flex">
+          <div class="gallery__image"><img src="./imgs/base.png" alt="little one"></div>
+          <div class="gallery__image"><img src="./imgs/base.png" alt="little one"></div>
+          <div class="gallery__image"><img src="./imgs/base.png" alt="little one"></div>
+          <div class="gallery__image"><img src="./imgs/base.png" alt="little one"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="main__info">
+
+    <div class="main__info__price">
+      <p class="main__info__price__back"><i class="fas fa-angle-left"></i> Back to <a  class="main__info__price__woman" href="#">Woman</a></p>
+      <h1 class="main__info__price__label">The atelier tailored coat</h1>
+      
+
+        <div class="main__info__price__block">
+          <div class="main__info__price__block__stars">
+              <i class="fas fa-star full"></i>
+              <i class="fas fa-star full"></i>
+              <i class="fas fa-star full"></i>
+              <i class="fas fa-star full"></i>
+              <i class="far fa-star empty" ></i>
+          </div>
+          <div class="main__info__price__review"><p>3 Review(s)</p></div>
+          <a href="#" class="main__info__price__adding"><p>Add a Review</p></a>
+        </div>
+        
+        <h1 class="main__info__price__value">$499.00</h1>
+    </div>
+
+    <div class="main__info__made">
+      <p class="main__info__made__key">Availability:<span class="main__info__made__key__value"> In stock</span></p>
+      <p class="main__info__made__key">Product code:<span class="main__info__made__key__value"> #4657M</span></p>
+      <p class="main__info__made__key"> Tags:<span class="main__info__made__key__value"> Fashion, Hood, Classic</span></p>
+    </div>
+
+    <div class="main__info__about">
+      <p class="main__info__about__text">
+          Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-
+          ton Lazio suit features a notch lapel, flap pockets, and accompanying flat
+          front trousers—all in pure wool by Vitale Barberis Canonico.
+      </p>
+      <ul class="main__info__about__list">
+        <li class="main__info__about__list__item">Dark blue suit for a tone-on-tone look</li>
+        <li class="main__info__about__list__item">Regular fit</li>
+        <li class="main__info__about__list__item">100% Cotton</li>
+        <li class="main__info__about__list__item">Free shipping with 4 days delivery</li>
+      </ul>
+    </div>
+
+    <div class="main__info__selecting">
+      <div class="main__info__selecting__container">
+        <p class="main__info__selecting__container__label">Color</p>
+        <select class="main__info__selecting__container__choice" name="first" id="1"><option>Select Color</option></select>
+      </div>
+      <div class="main__info__selecting__container">
+        <p class="main__info__selecting__container__label">Size</p>
+        <select class="main__info__selecting__container__choice" name="second" id="2"><option>Select Size</option></select>
+      </div>
+      <div class="main__info__selecting__container--thin">
+        <p class="main__info__selecting__container--thin__label">QTY</p>
+        <input type="number" class="main__info__selecting__container--thin__choice" name="third" id="3"></input>
+      </div>
+    </div>
+
+    <div class="main__info__clear--link">
+      <a href="#">Clear Selection</a>
+    </div>
+
+    <div class="main__info__adding">
+      <button class="main__info__adding__btn--first">Add to cart</button>
+      <button class="main__info__adding__btn--second"><i class="far fa-heart"></i> Add to wishlist</button>
+    </div>
+
+    <div class="main__info__links">
+      <div class="main__info__links__share"><p>share this</p></div>
+      <div><img src="imgs/like.png" alt="first-link"></div>
+      <div><img src="imgs/tweet.png" alt="second-link"></div>
+      <div><img src="imgs/pin.png" alt="third-link"></div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__text">Made with Love & Coffee © 2015 Design Lazy. All Rights Reserved.</p>
+</footer>
+
+<script src="https://use.fontawesome.com/14ff567f05.js"></script>
+</body>
+</html>
